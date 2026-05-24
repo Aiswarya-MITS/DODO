@@ -48,6 +48,8 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 ​The design transitions easily from parent-guided learning to independent child self-practice.  
 
 ##Demo/Examples
-<img width="1919" height="800" alt="Screenshot 2026-03-27 123523" src="https://github.com/user-attachments/assets/fff4808b-0864-43bb-9289-b3cdee06ac13" />
+<img width="1919" height="800" alt="Screenshot 2026-03-27 123523" src="https://github.com/user-attachments/assets/fff4808b-0864-43bb-9289-b3cdee06ac13" /> Spectrogram
+
+Spectrogram Created Using Samples The first stage of the pipeline involves feature extraction. Raw audio samples are processed into a spectrogram, which represents the frequency content of the sound over time. This visual representation helps the model identify unique "audio signatures" associated with different speech patterns.
 
  
