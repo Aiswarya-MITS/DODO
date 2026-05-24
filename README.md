@@ -29,7 +29,7 @@ The system integrates an ESP32-based MYOSA board, speech recognition using Edge 
 DODO listens to the child’s pronunciation, analyzes speech patterns in real time, and responds with visual, audio, and physical feedback when words are pronounced correctly. The toy includes vocabulary and phonics practice modes, helping children improve speech clarity, confidence, and communication skills.
 
 ##Key Features
-1. Oral Motor Training  
+ 1. Oral Motor Training  
 ​2. Focus & Stability Tracking  
 ​3. Smart Speech Recognition  
 ​4. Touchless Hand Gestures  
