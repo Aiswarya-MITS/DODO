@@ -57,6 +57,27 @@ _Figure 2:The U-Map visualization provides a graphical representation of the ent
 <img width="1656" height="669" alt="Screenshot 2026-03-27 123739" src="https://github.com/user-attachments/assets/cf19034d-844a-4c5c-8ab1-aacd50ebaad0" />
 _Figure 3:Arduino library created using trained model.
 
+##Features Detailed
+
+1. Multi-Sensory Oral Motor Training  
+​The toy utilizes a high-precision BMP180 pressure sensor to create gamified breathing exercises (like blowing out a digital candle). This physical interaction directly helps children strengthen their cheek and oral muscles, which are foundational for clear speech articulation.  
+
+​2. Physical Stability & Focus Tracking  
+​Using the MPU6050 inertial measurement unit (IMU), the toy monitors physical movement and tilt. It turns concentration into a game by challenging children—especially those with short attention spans or hyperactivity—to keep the toy steady and calm before moving to the next task.  
+
+​3. Edge AI Speech Recognition  
+​Powered by an ESP32-WROOM processor and a custom-trained Edge Impulse Machine Learning model, the toy processes voice commands locally in real-time via the INMP441 digital microphone. It accurately checks the child's pronunciation of target words (like "Cat") without requiring an active internet connection.  
+
+​4. Interactive, Touchless Navigation  
+​Integrating the APDS-9960 gesture sensor allows children to interact with the device using touchless hand movements. Kids can wave their hands left or right to switch between practice words, or trigger communication shortcuts, making the interface highly accessible and engaging.  
+
+​5. Instant Multi-Tiered Reward System  
+​To reinforce correct pronunciation and boost confidence, the toy provides instant, joyful feedback. When a child says a word correctly, the system simultaneously sounds a playful buzzer, displays a success message on the OLED screen, and activates a Servo motor to make the toy physically wave or move.  
+
+​6. Progressive Autonomy (Parent-to-Child Hand-Off)  
+​The toy's workflow is thoughtfully designed to adapt to a child’s comfort level. It begins as a collaborative tool for parents and children to use together, but features intuitive visual prompts and simple sensor triggers that allow the child to eventually transition to completely independent self-practice.  
+
+
 
 
  
