@@ -3,7 +3,7 @@
 **title**: DODO – Speech Assistant Toy for Speech Disabled Kids
 
 **image**: <p align="center">
-              <img src="/assets/images/DODO/coverimage.jpg" width="800"><br/>
+              <img src="./coverimage.jpg" width="800"><br/>
               <i>Your image caption</i>
            </p>
 
