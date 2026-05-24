@@ -52,16 +52,21 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 <p align="center">
   <img src="https://github.com/user-attachments/assets/371e1fa5-06f4-4c3b-8b19-0a075c66d82b" />
  width="800"><br/>
-  <i>Your image caption</i>
+  <i>Spectrogram Created Using Samples The first stage of the pipeline involves feature extraction. Raw audio samples are processed into a spectrogram, which represents the frequency content of the sound over time. This visual representation helps the model identify unique "audio signatures" associated with different speech patterns.</i>
 </p>
-<img width="1919" height="800" alt="Screenshot 2026-03-27 123523" src="https://github.com/user-attachments/assets/fff4808b-0864-43bb-9289-b3cdee06ac13" />
-_Figure 1:Spectrogram Created Using Samples The first stage of the pipeline involves feature extraction. Raw audio samples are processed into a spectrogram, which represents the frequency content of the sound over time. This visual representation helps the model identify unique "audio signatures" associated with different speech patterns.
 
-<img width="814" height="708" alt="Screenshot 2026-03-27 123706" src="https://github.com/user-attachments/assets/4751a110-ae80-42a2-93af-f7cb514a27aa" />
-_Figure 2:The U-Map visualization provides a graphical representation of the entire dataset. It clusters similar data points together, allowing the team to verify that the collected samples are distinct and that there is a clear separation between different classes (e.g., specific words vs. background noise).
+<p align="center">
+  <img src="umap" src="https://github.com/user-attachments/assets/d9adace0-0a36-43f0-b8ee-1823555669f0" />
+ width="800"><br/>
+  <i>The U-Map visualization provides a graphical representation of the entire dataset. It clusters similar data points together, allowing the team to verify that the collected samples are distinct and that there is a clear separation between different classes (e.g., specific words vs. background noise).</i>
+</p>
 
-<img width="1656" height="669" alt="Screenshot 2026-03-27 123739" src="https://github.com/user-attachments/assets/cf19034d-844a-4c5c-8ab1-aacd50ebaad0" />
-_Figure 3:Arduino library created using trained model.
+<p align="center">
+  <img src="arduino_library" src="https://github.com/user-attachments/assets/45e44cb3-faed-49fc-ab6a-6457302ef744" />
+ width="800"><br/>
+  <i>Arduino library created using trained model.
+</i>
+</p>
 
 ##Features Detailed
 
