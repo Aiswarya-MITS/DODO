@@ -163,9 +163,7 @@ Installation
 ​7.Connect the servo motor and buzzer to their designated GPIO pins.  
 ​8.Upload the source code to the ESP32 using Arduino IDE.  
 ​9.Power ON the system and verify the setup using the initialization cues on the OLED display.  
-
-
 <video controls width="100%">
-  <source src="demovideo.mp4" type="video/mp4"> 
+<source src="demovideo.mp4" type="video/mp4"> 
 </video>
 
