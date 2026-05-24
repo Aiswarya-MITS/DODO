@@ -5,7 +5,6 @@
 **excerpt**: DODO is an interactive speech therapy toy designed to assist children with speech disabilities through real-time speech recognition, multisensory feedback, and engaging therapy activities.
 <p align="center">
   <img src="coverimage.jpg" width="800"><br/>
-  <i>Your image caption</i>
 </p>
 
 **tags**:
