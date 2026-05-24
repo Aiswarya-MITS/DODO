@@ -88,7 +88,78 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 ​6. Progressive Autonomy (Parent-to-Child Hand-Off)  
 ​The toy's workflow is thoughtfully designed to adapt to a child’s comfort level. It begins as a collaborative tool for parents and children to use together, but features intuitive visual prompts and simple sensor triggers that allow the child to eventually transition to completely independent self-practice.  
 
+##Usage  Instructions
+1.Power ON the Speech Assistant device.
+​2.Keep the device still during gyro calibration.
+​3.Observe the OLED display for the "Ready" and candle prompt.
+​4.Blow into the breath port to complete the oral motor exercise.
+​5.Hold the device steadily to practice concentration focus.
+​6.Speak the target vocabulary word into the microphone.
+​7.ESP32 processes the audio data using the local AI library.
+​8.The buzzer sounds and servo motors activate to reward correct speech.
 
+##Techstack
 
+Hardware  
+Espressif Systems ESP32-WROOM Microcontroller  
+​BMP180 Barometric Pressure Sensor  
+​MPU6050 Accelerometer + Gyroscope  
+​APDS-9960 Gesture + Proximity Sensor  
+​INMP441 Digital I2S Microphone  
+​OLED Display (I2C)  
+​Servo Motor Mechanism  
+​Active Buzzer Indicator  
+​Embedded Power System  
 
- 
+ Software  
+Arduino IDE  
+​Embedded C++  
+​Edge Impulse Studio (TinyML Deployment)  
+​Edge Impulse SDK Library (Speech Recognition)  
+​ESP32Servo Library  
+​Adafruit BMP085/BMP180 Library  
+​Adafruit MPU6050 Library  
+​Adafruit APDS9960 Library  
+​I2S Audio Library  
+​Wire Library (I2C Communication)  
+
+##Requirements/Installation  
+
+Hardware Requirements  
+
+​ESP32 Development Board (ESP32-WROOM)  
+​BMP180 Barometric Pressure Sensor  
+​MPU6050 Accelerometer + Gyroscope Module  
+​APDS-9960 Gesture + Proximity Sensor  
+​INMP441 Digital I2S Microphone  
+​OLED Display (I2C)  
+​Servo Motor Module  
+​Active Buzzer Indicator  
+​Power Supply / Battery Pack  
+​Custom Toy Chassis / Enclosure  
+
+Software Requirements  
+
+​Arduino IDE  
+​ESP32 Board Package  
+​Required Libraries:  
+​1.Wire.h (Built-in I2C)  
+​2.I2S.h (Built-in Audio)  
+​3.ESP32Servo.h  
+​4.Adafruit_BMP085.h (or similar BMP180 library)  
+​5.Adafruit_MPU6050.h  
+​6.Adafruit_APDS9960.h  
+​7.Adafruit_SSD1306.h (and Adafruit_GFX.h for OLED)  
+​8.Custom Edge Impulse Studio Library (Exported ZIP format)  
+
+Installation  
+
+​1.Install Arduino IDE.  
+​2.Install ESP32 board support via the Arduino Boards Manager.  
+​3.Install all required sensor and display libraries via the Library Manager.  
+​4.Import the trained Edge Impulse speech recognition ZIP library into Arduino IDE.  
+​5.Connect the I2C peripheral devices (BMP180, MPU6050, APDS-9960, and OLED Display) using the shared I2C bus pins (SDA and SCL).  
+​6.Connect the INMP441 Microphone to the assigned digital I2S pins on the ESP32.  
+​7.Connect the servo motor and buzzer to their designated GPIO pins.  
+​8.Upload the source code to the ESP32 using Arduino IDE.  
+​9.Power ON the system and verify the setup using the initialization cues on the OLED display.  
