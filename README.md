@@ -166,6 +166,6 @@ Installation
 
 
 <video controls width="100%">
-  <source src="/demovideo.mp4" type="video/mp4">  
+  <source src="demovideo.mp4" type="video/mp4"> 
 </video>
 
