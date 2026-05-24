@@ -1,0 +1,133 @@
+#include "Neha2004_project_1_inferencing.h"   // Edge Impulse files
+#include <Wire.h>
+#include <driver/i2s.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#include <Servo.h>
+#include <MPU6050.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define BUZZER 25
+#define PRESSURE_PIN A0
+#define SERVO_PIN 9
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+Servo myServo;
+MPU6050 gyro;
+
+bool debug_nn = false;
+unsigned long lastInference = 0;
+const unsigned long interval = 3000;
+
+enum State {BLOW_CANDLE, SAY_CAT, HOLD_STEADY};
+State currentState = BLOW_CANDLE;
+
+// --- OLED helpers ---
+void showText(const String &msg, int size = 2) {
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+  display.setTextSize(size);
+  display.setCursor(10, 20);
+  display.println(msg);
+  display.display();
+}
+
+void showCatPrompt() {
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+  display.setTextSize(2);
+  display.setCursor(10, 0); display.println("Say CAT");
+  display.setTextSize(1);
+  display.setCursor(35, 28); display.print(" /\\_/\\ ");
+  display.setCursor(35, 38); display.print("( o.o )");
+  display.setCursor(35, 48); display.print(" > ^ < ");
+  display.display();
+}
+
+void happyTune() {
+  int tones[] = {1200, 1500, 1800};
+  for (int f : tones) { tone(BUZZER, f); delay(150); }
+  noTone(BUZZER);
+}
+
+// --- Setup ---
+void setup() {
+  Serial.begin(115200);
+  pinMode(BUZZER, OUTPUT);
+  myServo.attach(SERVO_PIN);
+
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println("OLED failed"); while (1);
+  }
+
+  Wire.begin();
+  gyro.initialize();
+  if (!gyro.testConnection()) {
+    Serial.println("Gyro not connected!"); while (1);
+  }
+
+  if (!microphone_inference_start(EI_CLASSIFIER_RAW_SAMPLE_COUNT))
+    Serial.println("Audio buffer error");
+
+  showText("Blow Candle!");
+}
+
+// --- Loop ---
+void loop() {
+  switch (currentState) {
+    case BLOW_CANDLE: {
+      int pressureValue = analogRead(PRESSURE_PIN);
+      Serial.print("Pressure: "); Serial.println(pressureValue);
+      if (pressureValue < 200) { // threshold for "blow"
+        showCatPrompt();
+        currentState = SAY_CAT;
+        delay(1000);
+      }
+      break;
+    }
+
+    case SAY_CAT: {
+      if (!microphone_inference_record()) return;
+      if (millis() - lastInference < interval) return;
+      lastInference = millis();
+
+      signal_t signal = {EI_CLASSIFIER_RAW_SAMPLE_COUNT, &microphone_audio_signal_get_data};
+      ei_impulse_result_t result;
+      if (run_classifier(&signal, &result, debug_nn) != EI_IMPULSE_OK) return;
+
+      float catProb = 0;
+      for (size_t i = 0; i < EI_CLASSIFIER_LABEL_COUNT; i++)
+        if (!strcasecmp(result.classification[i].label, "cat"))
+          catProb = result.classification[i].value;
+
+      Serial.printf("Cat probability: %.2f\n", catProb);
+      if (catProb >= 0.4) {
+        showText("HURRAY!");
+        happyTune();
+        delay(1500);
+        showText("Hold Steady!");
+        currentState = HOLD_STEADY;
+      } else {
+        showText("TRY AGAIN");
+        delay(1500);
+        showCatPrompt();
+      }
+      break;
+    }
+
+    case HOLD_STEADY: {
+      int16_t ax, ay, az, gx, gy, gz;
+      gyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+      float gyroAngle = gx / 131.0;
+      int servoPos = constrain(90 + (int)gyroAngle, 0, 180);
+      myServo.write(servoPos);
+
+      Serial.print("Gyro X: "); Serial.print(gyroAngle);
+      Serial.print(" | Servo: "); Serial.println(servoPos);
+
+      delay(200);
+      break;
+    }
+  }
+}
