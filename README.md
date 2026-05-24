@@ -48,8 +48,11 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 ​The design transitions easily from parent-guided learning to independent child self-practice.  
 
 ##Demo/Examples
-<img width="1919" height="800" alt="Screenshot 2026-03-27 123523" src="https://github.com/user-attachments/assets/fff4808b-0864-43bb-9289-b3cdee06ac13" /> Spectrogram
+<img width="1919" height="800" alt="Screenshot 2026-03-27 123523" src="https://github.com/user-attachments/assets/fff4808b-0864-43bb-9289-b3cdee06ac13" />
+_Figure 1:Spectrogram Created Using Samples The first stage of the pipeline involves feature extraction. Raw audio samples are processed into a spectrogram, which represents the frequency content of the sound over time. This visual representation helps the model identify unique "audio signatures" associated with different speech patterns.
 
-Spectrogram Created Using Samples The first stage of the pipeline involves feature extraction. Raw audio samples are processed into a spectrogram, which represents the frequency content of the sound over time. This visual representation helps the model identify unique "audio signatures" associated with different speech patterns.
+<img width="814" height="708" alt="Screenshot 2026-03-27 123706" src="https://github.com/user-attachments/assets/8e741fb7-6a53-4b49-908d-904138d6ffa3" />
+_Figure2:The U-Map visualization provides a graphical representation of the entire dataset. It clusters similar data points together, allowing the team to verify that the collected samples are distinct and that there is a clear separation between different classes (e.g., specific words vs. background noise).
+
 
  
