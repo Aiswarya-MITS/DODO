@@ -167,3 +167,6 @@ Installation
  <source src="presentation.mp4" type="video/mp4"> 
 </video>
 
+<video controls width="100%">
+  <source src="presentation.mp4" type="video/mp4">
+</video>
