@@ -50,20 +50,17 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 ##Demo/Examples
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/371e1fa5-06f4-4c3b-8b19-0a075c66d82b" />
- width="800"><br/>
+  <img src="https://github.com/user-attachments/assets/371e1fa5-06f4-4c3b-8b19-0a075c66d82b" width="800"><br/>
   <i>Spectrogram Created Using Samples The first stage of the pipeline involves feature extraction. Raw audio samples are processed into a spectrogram, which represents the frequency content of the sound over time. This visual representation helps the model identify unique "audio signatures" associated with different speech patterns.</i>
 </p>
 
 <p align="center">
-  <img src="umap" src="https://github.com/user-attachments/assets/d9adace0-0a36-43f0-b8ee-1823555669f0" />
- width="800"><br/>
+  <img src="umap" src="https://github.com/user-attachments/assets/d9adace0-0a36-43f0-b8ee-1823555669f0" width="800"><br/>
   <i>The U-Map visualization provides a graphical representation of the entire dataset. It clusters similar data points together, allowing the team to verify that the collected samples are distinct and that there is a clear separation between different classes (e.g., specific words vs. background noise).</i>
 </p>
 
 <p align="center">
-  <img src="arduino_library" src="https://github.com/user-attachments/assets/45e44cb3-faed-49fc-ab6a-6457302ef744" />
- width="800"><br/>
+  <img src="arduino_library" src="https://github.com/user-attachments/assets/45e44cb3-faed-49fc-ab6a-6457302ef744" width="800"><br/>
   <i>Arduino library created using trained model.
 </i>
 </p>
