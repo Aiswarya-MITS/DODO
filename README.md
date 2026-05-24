@@ -60,7 +60,7 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 </p>
 
 <p align="center">
-  <img src="arduino_library" src="https://github.com/user-attachments/assets/f0b4343a-b5d3-49af-a621-e401c3d413d7"width="800"><br/>
+  <img src="https://github.com/user-attachments/assets/f0b4343a-b5d3-49af-a621-e401c3d413d7"width="800"><br/>
   <i>Arduino library created using trained model.
 </i>
 </p>
