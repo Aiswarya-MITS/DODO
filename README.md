@@ -30,15 +30,10 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 
 ##Key Features
 1. Oral Motor Training
-​
 ​2. Focus & Stability Tracking
-​
 ​3. Smart Speech Recognition
-​
 ​4. Touchless Hand Gestures
-​
 ​5. Multi-Sensory Rewards
-​
 ​6. Parent-to-Child Autonomy
 ​
  
