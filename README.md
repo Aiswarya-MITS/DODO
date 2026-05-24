@@ -55,12 +55,13 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 </p>
 
 <p align="center">
-  <img src="umap" src="https://github.com/user-attachments/assets/d9adace0-0a36-43f0-b8ee-1823555669f0" width="800"><br/>
+  <img src=<"umap" src="https://github.com/user-attachments/assets/76f2fc26-7f7b-4241-b5b1-2ddace8a32f6" />
+ width="800"><br/>
   <i>The U-Map visualization provides a graphical representation of the entire dataset. It clusters similar data points together, allowing the team to verify that the collected samples are distinct and that there is a clear separation between different classes (e.g., specific words vs. background noise).</i>
 </p>
 
 <p align="center">
-  <img src="arduino_library" src="https://github.com/user-attachments/assets/45e44cb3-faed-49fc-ab6a-6457302ef744" width="800"><br/>
+  <img src=<"arduino_library" src="https://github.com/user-attachments/assets/f0b4343a-b5d3-49af-a621-e401c3d413d7"width="800"><br/>
   <i>Arduino library created using trained model.
 </i>
 </p>
