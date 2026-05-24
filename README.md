@@ -164,5 +164,5 @@ Installation
 ​8.Upload the source code to the ESP32 using Arduino IDE.  
 ​9.Power ON the system and verify the setup using the initialization cues on the OLED display.  
 <video controls width="100%">
-  <source src="https://github.com/Aiswarya-MITS/DODO/blob/ce3855e961320a86177f21eb1d4a7a95abb6f6c5/demovideo.mp4" type="video/mp4">
+  <source src="demovideo.mp4" type="video/mp4">
 </video>
