@@ -1,10 +1,10 @@
-publishDate: 2026-05-24
+**publishDate**: 2026-05-24
 
-title: DODO – AI Powered Speech Assistant Toy for Speech Disabled Kids
+**title**: DODO – AI Powered Speech Assistant Toy for Speech Disabled Kids
 
-excerpt: DODO is an interactive AI-powered speech therapy toy designed to assist children with speech disabilities through real-time speech recognition, multisensory feedback, and engaging therapy activities.
+**excerpt**: DODO is an interactive AI-powered speech therapy toy designed to assist children with speech disabilities through real-time speech recognition, multisensory feedback, and engaging therapy activities.
 
-tags:
+**tags**:
 
 Speech Therapy
 Embedded AI
@@ -14,7 +14,7 @@ Assistive Technology
 
 Making speech therapy interactive, engaging, and accessible for children through AI-enabled assistive technology.
 
-Acknowledgements
+##Acknowledgements
 
 We sincerely thank Team MYOSA Sensors for providing the MYOSA development platform, sensor modules, and technical guidance throughout the project development process.
 
