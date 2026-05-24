@@ -30,7 +30,8 @@ DODO listens to the child’s pronunciation, analyzes speech patterns in real ti
 
 ##Key Features  
 1. Oral Motor Training  
-​Gamified blowing exercises help children strengthen their cheek and oral muscles for clearer speech.  
+​Gamified blowing exercises help children strengthen their cheek and oral muscles for clearer speech.
+ 
 ​2. Focus & Stability Tracking  
 ​Interactive balance challenges prompt children to keep the toy steady, building physical concentration.  
 ​3. Smart Speech Recognition  
